@@ -1,70 +1,63 @@
-# 💼 Project 1 – A Network Intrusion (Digital Forensics Presentation)
+# Network Intrusion Analysis – Web Server Compromise
 
 ![Project 1 Cover](digital-forensics-project1-cover.png)
 
-**Course:** CST 640 – Digital Forensics Technology and Practices (UMGC)  
-**Author:** Niknaz Sadehvandi  
-**Date:** January 30, 2025  
+## Overview
+Forensic analysis of a simulated network intrusion targeting a vulnerable IIS web server.  
+The investigation focuses on reconnaissance activity, exposed credentials, and server misconfiguration leading to unauthorized access.
 
----
+## Why This Project Matters to SOC Teams
+- Demonstrates early-stage intrusion detection through web server artifacts
+- Shows how misconfigurations expose credentials and expand attack surface
+- Supports investigation of initial access techniques and remediation actions
 
-## 🧩 Overview
-This project is a **PowerPoint presentation** that explores a simulated **network intrusion investigation** in a controlled digital forensics lab (MARS environment).  
-It focuses on identifying vulnerabilities, decoding Base64-encoded passwords, and correcting web server misconfigurations to prevent unauthorized access.
+## Environment
+- OS: Linux (attacker), Windows Server (victim)
+- Data Sources: IIS logs, web directory listings
+- Tools: Dirb, Nmap, Nikto, CyberChef
+- Frameworks: DFIR investigation workflow
 
----
+## Data Collected / Artifacts
+- Web server directory enumeration results
+- IIS configuration artifacts
+- Base64-encoded credential exposure
+- User and group account information
+- Indicators of Compromise (IOCs)
 
-## 🧠 Tools & Technologies
-- 🐧 Kali Linux (MARS)
-- 💻 Windows Server (IIS)
-- 🔍 Dirb | Nmap | Nikto
-- 🧮 CyberChef (for Base64 decoding)
-- ⚙️ `net user` and `net localgroup` commands
+## Analysis Steps
+1. Performed reconnaissance against the IIS server using Dirb and Nmap
+2. Identified exposed directories and insecure web configuration
+3. Extracted and decoded Base64-encoded credentials
+4. Verified user access and privilege implications
+5. Assessed server misconfiguration and attack impact
 
----
+## Findings
+- IIS misconfiguration exposed sensitive directories
+- Base64-encoded credentials revealed valid user information
+- Reconnaissance activity confirmed attacker visibility into server structure
+- Misconfigurations increased likelihood of unauthorized access
 
-## ⚙️ Key Objectives
-1. Analyze a vulnerable IIS web server configuration.  
-2. Perform reconnaissance using Dirb to locate hidden directories.  
-3. Decode exposed Base64 credentials to reveal user information.  
-4. Apply mitigation techniques to strengthen server security.  
+## Outcome
+- Initial access vector identified and documented
+- Credential exposure confirmed
+- Recommended IIS hardening and access control remediation
+- Suggested monitoring for web reconnaissance activity
 
----
+## Evidence
+- Screenshots and artifacts stored in `/images`
+- Full investigation available as PDF
 
-## 📄 Project Slides / Report
-📘 [View or Download Presentation (PDF)](Digital-Forensics-Project1-Network-Intrusion.pdf)
+## Project Files
+- `Digital-Forensics-Project1-Network-Intrusion.pdf`
+- `/images`
 
----
+## Skills Demonstrated
+- Network intrusion investigation
+- Web server forensics
+- Credential exposure analysis
+- Reconnaissance detection
+- Evidence-based reporting
 
-## 🖼️ Screenshot Highlights (Placeholders)
-
-| Screenshot | Description |
-|-------------|-------------|
-| ![MARS Linux Setup](images/mars-linux.png) | MARS Linux environment used for security testing |
-| ![Dirb Scan](images/dirb-scan.png) | Example of Dirb scan showing hidden directories |
-| ![CyberChef Decode](images/cyberchef-decode.png) | Base64 decoding of exposed credentials |
-| ![IIS Misconfiguration](images/iis-config.png) | Misconfigured IIS server leading to exposure |
-
-> 💡 Tip: You can create an `images/` folder in your repo and upload screenshots from your PowerPoint slides to replace these placeholders.
-
----
-
-## 🧑‍💻 Skills Demonstrated
-- Network Vulnerability Assessment  
-- Web Server Forensics  
-- Incident Analysis & Reporting  
-- Threat Detection and Mitigation  
-- Base64 Data Decoding and Credential Recovery  
-
----
-
-## 🛡️ References
-- [NIST Cybersecurity Framework 2.0](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf)  
-- [CISA Cybersecurity Best Practices](https://www.cisa.gov/topics/cybersecurity-best-practices)  
-- [GeeksforGeeks – Base64 Encoding in Python](https://www.geeksforgeeks.org/encoding-and-decoding-base64-strings-in-python/)  
-- [Trellix – Decoding the DNA of Ransomware Attacks](https://www.trellix.com/blogs/research/decoding-the-dna-of-ransomware-attacks/)  
-
----
-
-**© 2025 Niknaz Sadehvandi | University of Maryland Global Campus**
-
+## Author
+**Niknaz Sadehvandi**  
+**Cybersecurity Analyst**
